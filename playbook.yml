@@ -1,0 +1,21 @@
+---
+- name: Installing Python with Pytest
+  hosts: app-server
+  become: true
+
+  tasks:
+    - name: Install Python3
+      yum:
+        name: python3
+        state: present
+
+    - name: Installing pip
+      yum:
+        name: python3-pip
+        state: present
+
+    - name: Install pytest with pip
+      pip:
+        name: pytest
+        state: present 
+    
