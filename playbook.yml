@@ -1,6 +1,6 @@
 ---
 - name: Installing Python with Pytest
-  hosts: app-server
+  hosts: app-servers
   become: true
 
   tasks:
