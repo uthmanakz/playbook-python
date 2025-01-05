@@ -18,4 +18,9 @@
       pip:
         name: pytest
         state: present 
+
+    - name: copying hello.py with python servers
+      copy:
+        src: hello.py
+        dest: /tmp/
     
